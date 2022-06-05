@@ -1,7 +1,7 @@
 import * as path from "node:path";
 import { release, version } from "node:os";
 import { createServer as createServerHttp } from "node:http";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import "./files/c.js";
 
 const random = Math.random();
@@ -11,13 +11,19 @@ const __dirname = path.dirname(__filename);
 let unknownObject;
 
 if (random > 0.5) {
-  unknownObject = await import("./files/a.json", {
-    assert: { type: "json" },
-  }).then((data) => data.default);
+  unknownObject = await import(
+    pathToFileURL(path.join(__dirname, "files", "a.json")),
+    {
+      assert: { type: "json" },
+    }
+  ).then((data) => data.default);
 } else {
-  unknownObject = await import("./files/b.json", {
-    assert: { type: "json" },
-  }).then((data) => data.default);
+  unknownObject = await import(
+    pathToFileURL(path.join(__dirname, "files", "b.json")),
+    {
+      assert: { type: "json" },
+    }
+  ).then((data) => data.default);
 }
 console.log(unknownObject);
 
