@@ -1,5 +1,7 @@
 # Node.js basics
 
+# ПРОШУ ОБРАТИТЬ ВНИМАНИЕ НА ЗАДАНИЯ `fs:rename` и `streams:write` <br/> <br/> В ЭТИХ ЗАДАНИЯХ СЛУЧАЙНО БЫЛИ ДОПУЩЕНЫ ОШИБКИ, <br/> КОТОРЫЕ НИКАК НЕ ВЛИЯЮТ НА ФУНКЦИОНАЛ. А ИМЕННО: <br/><br/>ЗАДАНИЕ `fs:rename`: <br/> `const oldFile = path.join(__dirname, "files", "wrongFilenames.txt");` <br/> В ЭТОМ МЕСТЕ НУЖНО УБРАТЬ БУКВУ `s` В КОНЦЕ НАЗВАНИЯ ФАЙЛА. <br/> ОНА БЫЛА ДОБАВЛЕНА ДЛЯ ПРОВЕРКИ ФУНКЦИИ ПРИ ОТСУТСТВИИ ФАЙЛА. <br/><br/> ЗАДАНИЕ `streams:write`: <br/>КОПИРОВАНИЕ ИМПОРТОВ С ЭТОГО ФАЙЛА В ФАЙЛ `streams:transform`<br/> СЛУЧАЙНО БЫЛО СДЕЛАНО ЧЕРЕЗ `CTRL + X` А НЕ `CTRL + C`<br/> ПОЖАЛУЙСТА, ПРОСТО ДОБАВЬТЕ ИМПОРТЫ, ФУНКЦИОНАЛ РАБОТАЕТ <br/><br/> СПАСИБО!
+
 ## Run tests
 
 You can test with the npm scripts below:
